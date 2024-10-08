@@ -1,0 +1,122 @@
+@font-face {
+  font-family: "Inter Regular";
+  src: url("fonts/static/Inter-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Inter Bold";
+  src: url("fonts/static/Inter-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Inter SemiBold";
+  src: url("fonts/static/Inter-SemiBold.ttf") format("truetype");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --content-black: #171717;
+  --content-white: hsl(0, 0%, 100%);
+  --content-green: hsl(75, 94%, 57%);
+  --grey-700: hsl(0, 0%, 20%);
+  --grey-800: hsl(0, 0%, 12%);
+  --grey-900: hsl(0, 0%, 8%);
+}
+
+body {
+  background-color: var(--content-black);
+  color: var(--content-white);
+  font-family: "Inter Regular", sans-serif;
+}
+
+.profile-wrapper-container {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-wrapper {
+  width: 80vw;
+  height: 65vh;
+  /* border: 2px solid var(--content-white); */
+  border-radius: 10px;
+  padding: 6%;
+  background-color: var(--grey-800);
+}
+
+.developer-info {
+  /* border: 2px solid var(--content-white); */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.developer-image {
+  border-radius: 50%;
+  width: 35%;
+  height: 35%;
+}
+
+.developer-info > h2 {
+  margin: 8% 0% 3% 0%;
+}
+
+.developer-info > h4 {
+  font-family: "Inter Bold", "sans-serif";
+  font-size: small;
+  margin-bottom: 8%;
+  color: var(--content-green);
+}
+
+.developer-info > p {
+  font-size: small;
+  margin-bottom: 8%;
+  opacity: 0.9;
+}
+
+.social-links-wrapper {
+  /* border: 2px solid var(--content-white); */
+  height: 55%;
+  display: flex;
+  flex-direction: column;
+  gap: 5%;
+}
+
+.social-link {
+  width: 100%;
+  height: 17%;
+  /* border: 2px solid var(--content-white); */
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--grey-700);
+  font-size: 13px;
+  color: var(--content-white);
+}
+
+/* Desktop Design */
+
+@media only screen and (width >= 64em) {
+  .profile-wrapper {
+    width: 22vw;
+    padding: 2%;
+    height: 80vh;
+  }
+
+  .social-link {
+    height: 15%;
+  }
+
+  .social-link:hover {
+    cursor: pointer;
+    background-color: var(--content-green);
+    color: var(--grey-900);
+  }
+}
